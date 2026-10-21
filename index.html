@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dapur Nusa — Kuliner Rumahan Nusantara</title>
+  <meta name="description" content="Dapur Nusa menyajikan masakan rumahan Nusantara segar dan higienis. Pesan sekarang via WhatsApp, katalog lengkap, galeri, dan testimoni pelanggan." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">
+        <span class="brand-mark">DN</span>
+        <span class="brand-name">Dapur <b>Nusa</b></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Beranda</a>
+        <a href="#menu">Menu</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#testimoni">Testimoni</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Buka keranjang">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <span class="badge">UMKM Kuliner · Sejak 2015</span>
+          <h1>Masakan rumahan <span class="accent">Nusantara</span> yang bikin kangen rumah.</h1>
+          <p>Dimasetiap pagi dengan bahan segar pilihan, tanpa pengawet. Pesan hari ini, sampai selagi hangat.</p>
+          <div class="hero-cta">
+            <a href="#menu" class="btn btn-primary">Lihat Menu</a>
+            <a href="#" class="btn btn-ghost wa-link" data-pesan="Halo Dapur Nusa, saya mau tanya-tanya menu ya.">Pesan via WhatsApp</a>
+          </div>
+          <div class="hero-stats">
+            <div><strong>35+</strong><span>Menu pilihan</span></div>
+            <div><strong>4.9</strong><span>Rating pelanggan</span></div>
+            <div><strong>12rb+</strong><span>Pesanan terkirim</span></div>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="plate">
+            <div class="dish dish-1">🍲</div>
+            <div class="dish dish-2">🍜</div>
+            <div class="dish dish-3">🍢</div>
+          </div>
+          <div class="float-card card-a"><b>Gratis ongkir</b><span>Min. belanja 50rb</span></div>
+          <div class="float-card card-b"><b>100% Halal</b><span>Bahan segar tiap hari</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU / KATALOG -->
+    <section class="section" id="menu">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Katalog Produk</span>
+          <h2>Menu favorit pelanggan</h2>
+          <p>Pilih, masukkan ke keranjang, lalu checkout langsung lewat WhatsApp.</p>
+        </div>
+
+        <div class="filters" id="filters">
+          <button class="chip active" data-filter="all">Semua</button>
+          <button class="chip" data-filter="nasi">Nasi &amp; Berat</button>
+          <button class="chip" data-filter="kuah">Berkuah</button>
+          <button class="chip" data-filter="snack">Cemilan</button>
+          <button class="chip" data-filter="minum">Minuman</button>
+        </div>
+
+        <div class="grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <!-- GALERI -->
+    <section class="section section-alt" id="galeri">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Galeri</span>
+          <h2>Sekilas dari dapur kami</h2>
+          <p>Proses masak, penyajian, dan momen pelanggan yang puas.</p>
+        </div>
+        <div class="gallery" id="gallery"></div>
+      </div>
+    </section>
+
+    <!-- TESTIMONI -->
+    <section class="section" id="testimoni">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Testimoni</span>
+          <h2>Kata mereka yang sudah pesan</h2>
+        </div>
+        <div class="testi-grid" id="testiGrid"></div>
+      </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section class="section section-alt" id="kontak">
+      <div class="container kontak-inner">
+        <div class="kontak-info">
+          <span class="eyebrow">Kontak</span>
+          <h2>Ada yang mau ditanyakan?</h2>
+          <p>Hubungi kami lewat WhatsApp atau datang langsung ke dapur. Kami buka setiap hari 08.00 – 21.00 WIB.</p>
+          <ul class="info-list">
+            <li>
+              <span class="ico">📍</span>
+              <div><b>Alamat</b><span>Jl. Melati Raya No. 21, Kec. Sukamaju, Kota Bandung</span></div>
+            </li>
+            <li>
+              <span class="ico">📞</span>
+              <div><b>Telepon / WA</b><span>0812-3456-7890</span></div>
+            </li>
+            <li>
+              <span class="ico">✉️</span>
+              <div><b>Email</b><span>halo@dapurnusa.id</span></div>
+            </li>
+            <li>
+              <span class="ico">🕒</span>
+              <div><b>Jam Buka</b><span>Setiap hari, 08.00 – 21.00 WIB</span></div>
+            </li>
+          </ul>
+          <div class="hero-cta">
+            <a href="#" class="btn btn-primary wa-link" data-pesan="Halo Dapur Nusa, saya mau tanya-tanya ya.">Chat WhatsApp</a>
+            <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-ghost">Lihat di Google Maps</a>
+          </div>
+        </div>
+
+        <form class="kontak-form" id="kontakForm">
+          <h3>Kirim pesan</h3>
+          <label>Nama
+            <input type="text" name="nama" placeholder="Nama lengkap" required />
+          </label>
+          <label>No. WhatsApp
+            <input type="tel" name="wa" placeholder="08xxxxxxxxxx" required />
+          </label>
+          <label>Pesan
+            <textarea name="pesan" rows="4" placeholder="Tulis pesanmu..." required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary btn-block">Kirim Pesan</button>
+          <p class="form-note" id="formNote" hidden>Pesan siap dikirim lewat WhatsApp.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#home" class="brand">
+          <span class="brand-mark">DN</span>
+          <span class="brand-name">Dapur <b>Nusa</b></span>
+        </a>
+        <p>UMKM kuliner rumahan yang menyajikan cita rasa Nusantara dengan bahan segar dan higienis.</p>
+      </div>
+      <div class="footer-col">
+        <b>Navigasi</b>
+        <a href="#menu">Menu</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#testimoni">Testimoni</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+      <div class="footer-col">
+        <b>Ikuti Kami</b>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">TikTok</a>
+        <a href="#" class="wa-link" data-pesan="Halo Dapur Nusa!">WhatsApp</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Dapur Nusa. UMKM Kuliner Nusantara.</span>
+      <span>Dibuat dengan ♥ untuk UMKM Indonesia</span>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Keranjang belanja">
+    <div class="drawer-head">
+      <h3>Keranjang</h3>
+      <button class="icon-close" id="closeCart" aria-label="Tutup keranjang">✕</button>
+    </div>
+    <div class="drawer-body" id="cartItems"></div>
+    <div class="drawer-foot">
+      <div class="cart-total">
+        <span>Total</span>
+        <b id="cartTotal">Rp 0</b>
+      </div>
+      <label class="catatan">Catatan
+        <input type="text" id="cartNote" placeholder="Contoh: tidak pedas, tanpa telur..." />
+      </label>
+      <button class="btn btn-wa btn-block" id="checkoutBtn">Checkout via WhatsApp</button>
+      <button class="btn btn-ghost btn-block" id="clearCart">Kosongkan Keranjang</button>
+    </div>
+  </aside>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
