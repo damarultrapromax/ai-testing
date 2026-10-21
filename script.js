@@ -1,5 +1,5 @@
 /* ============ KONFIGURASI ============ */
-const WA_NUMBER = "6281234567890"; // Ganti nomor WhatsApp UMKM kamu (format 62...)
+const WA_NUMBER = "6285852510445"; // Ganti nomor WhatsApp UMKM kamu (format 62...)
 
 const PRODUCTS = [
   { id: 1,  name: "Nasi Rendang Sapi",      cat: "nasi",   price: 35000, emoji: "🍛", tag: "Best Seller", desc: "Rendang empuk 4 jam, nasi puluk, sambal ijo." },
